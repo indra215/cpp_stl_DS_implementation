@@ -69,6 +69,15 @@ public:
 		}
 		throw "Bad optional data";
 	}
+	
+	T& operator*()
+	{
+		if(valid_)
+		{
+			return data_;
+		}
+		throw "Bad optional data";
+	}
 };
 
 int main(int argc, char const *argv[])
